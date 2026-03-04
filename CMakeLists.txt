@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 4.2)
 project(
-  Hello
+	code2pdf 
   VERSION 1.0
   LANGUAGES CXX
 )

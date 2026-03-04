@@ -12,12 +12,12 @@ set(INSTALL_GTEST OFF CACHE BOOL "")
 
 FetchContent_MakeAvailable(googletest)
 
-add_executable(${PROJECT_NAME}Tests)
-target_link_libraries(${PROJECT_NAME}Tests PRIVATE gtest_main)
-target_link_libraries(${PROJECT_NAME}Tests PRIVATE ${PROJECT_NAME}Core)
-target_sources(${PROJECT_NAME}Tests PRIVATE
+add_executable(${PROJECT_NAME}_tests)
+target_link_libraries(${PROJECT_NAME}_tests PRIVATE gtest_main)
+target_link_libraries(${PROJECT_NAME}_tests PRIVATE ${PROJECT_NAME}_core)
+target_sources(${PROJECT_NAME}_tests PRIVATE
 	hello_test.cpp
 )
 
 include(GoogleTest)
-gtest_discover_tests(${PROJECT_NAME}Tests)
+gtest_discover_tests(${PROJECT_NAME}_tests)

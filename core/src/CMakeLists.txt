@@ -1,3 +1,3 @@
-target_sources(${PROJECT_NAME}Core PRIVATE
+target_sources(${PROJECT_NAME}_core PRIVATE
 	hello.cpp
 )
