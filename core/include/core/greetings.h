@@ -2,9 +2,7 @@
 
 #include <string>
 
-
-namespace core
-{
+namespace core {
 
 /// Returns a string to greet the user.
 ///
@@ -13,4 +11,4 @@ namespace core
 /// @return The string used to greet the user
 std::string get_hello(const std::string& name);
 
-}
+}  // namespace core

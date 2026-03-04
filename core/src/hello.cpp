@@ -2,12 +2,8 @@
 
 #include <string>
 
-
 namespace core {
 
-std::string get_hello(const std::string& name)
-{
-	return "Hello " + name + "!";
-}
+std::string get_hello(const std::string& name) { return "Hello " + name + "!"; }
 
-}
+}  // namespace core
