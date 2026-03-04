@@ -1,0 +1,15 @@
+PROJECT_NAME           = "@PROJECT_NAME@"
+PROJECT_NUMBER         = "@PROJECT_VERSION@-@PROJECT_VERSION_PRERELEASE@"
+OUTPUT_DIRECTORY       = "@CMAKE_BINARY_DIR@/docs"
+INPUT                  = "@INCLUDE_DIRS@"
+RECURSIVE              = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+EXTRACT_ALL            = YES
+QUIET                  = YES
+
+HTML_EXTRA_STYLESHEET = "@CMAKE_CURRENT_SOURCE_DIR@/doxygen-awesome.css"
+HTML_EXTRA_FILES = "@CMAKE_CURRENT_SOURCE_DIR@/doxygen-awesome-darkmode-toggle.js"
+
