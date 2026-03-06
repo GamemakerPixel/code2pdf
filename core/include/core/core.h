@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 namespace core {
 
 /// Creates a PDF with a single blank page.
