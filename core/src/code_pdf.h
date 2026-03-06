@@ -4,6 +4,6 @@
 
 namespace core {
 
-std::string get_hello(const std::string& name);
+void create_test_pdf(const std::string& filename);
 
 }
