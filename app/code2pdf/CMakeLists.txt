@@ -1,13 +1,16 @@
-add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_core)
-
-target_compile_options(${PROJECT_NAME} PRIVATE
-	-O1
-#	-fsanitize=address,undefined
-#	-fno-omit-frame-pointer
+include(FetchContent)
+FetchContent_Declare(
+	Lyra
+	GIT_REPOSITORY https://github.com/bfgroup/Lyra.git
+	GIT_TAG 1.7.0
 )
+FetchContent_MakeAvailable(Lyra)
 
-#target_link_options(${PROJECT_NAME} PRIVATE
-#	-fsanitize=address,undefined
-#)
-
+add_executable(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}_core)
+target_link_libraries(${PROJECT_NAME} PRIVATE bfg::lyra)
+target_sources(${PROJECT_NAME} PRIVATE
+	main.cpp
+	cli.cpp
+)
+	
