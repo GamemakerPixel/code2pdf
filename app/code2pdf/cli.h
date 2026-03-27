@@ -1,3 +1,4 @@
+#include <expected>
 #include <string>
 
 struct CliArgs {
@@ -6,4 +7,9 @@ struct CliArgs {
 	CliArgs(std::string output_file);
 };
 
-CliArgs parse_cli_args(int argc, char* argv[]);
+enum class ParseFailure {
+	RequestedHelp,
+	InvalidArguments,
+};
+
+std::expected<CliArgs, ParseFailure> parse_cli_args(int argc, const char* argv[]);
