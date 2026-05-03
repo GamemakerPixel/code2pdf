@@ -15,9 +15,9 @@ int main(int argc, const char* argv[]) {
 		}
 	}
 
-	CliArgs args = *parse_result;
+	//CliArgs args = *parse_result;
 
-  core::create_test_pdf(args.output_file);
+  //core::create_test_pdf(args.output_file);
 
   return 0;
 }
